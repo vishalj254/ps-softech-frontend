@@ -5,6 +5,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import IconButton from '@material-ui/core/IconButton';
 
 const styles = theme => ({
   title: {
@@ -33,6 +37,15 @@ const styles = theme => ({
   linkSecondary: {
     color: theme.palette.secondary.main,
   },
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
 });
 
 function AppAppBar(props) {
@@ -44,6 +57,18 @@ function AppAppBar(props) {
 
   const handleClick=(view)=>{
     props.setViews(view,'0')
+  }
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  
+  function handleMenu(event) {
+    setAnchorEl(event.currentTarget);
+  }
+
+  function handleClose() {
+    setAnchorEl(null);
   }
 
   return (
@@ -62,6 +87,35 @@ function AppAppBar(props) {
             {'PS Softech'}
           </Link>
           <div className={classes.right}>
+              <IconButton
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+              >
+                <AccountCircle />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>User Login</MenuItem>
+                {/* <MenuItem onClick={handleClose}>My account</MenuItem> */} 
+              </Menu>
+            </div>
+          <div className={classes.right}>
             <Link
               color="inherit"
               variant="h6"
@@ -69,7 +123,7 @@ function AppAppBar(props) {
               className={classes.rightLink}
               onClick={(event)=>handleClick('SIGNIN')}
             >
-              {'Sign In'}
+              {'Download'}
             </Link>
             <Link
               variant="h6"

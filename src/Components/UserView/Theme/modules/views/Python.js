@@ -649,7 +649,7 @@ class Python extends React.Component {
         </ExpansionPanel>
         <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel28'} onChange={this.handleChange('panel28')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-         {this.state.save}<Typography style={{marginTop:'-0.07%',color:'#264375'}}><b> Class 3.Data Preprocessing</b></Typography>
+         {this.state.save}<Typography style={{marginTop:'-0.07%',color:'#264375'}}><b> Class 3: Data Preprocessing</b></Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
            <div style={{fontSize:'12px',color:'#264375'}}>

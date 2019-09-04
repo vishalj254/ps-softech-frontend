@@ -488,59 +488,7 @@ Spring Boot Web Development And Rest Services </b></Typography>
  </ExpansionPanelDetails>
 </ExpansionPanel>
   </Card>
-  
-        <Paper >
-  <Typography style={{marginLeft:'35%',marginTop:'2%',fontSize:'25px',color:'#263475',borderBottom:'#263475 1px dotted',width:'39%'}}>Extra benefits of Training from Campusshala: </Typography>
-  <Grid container spacing={24} >
-
-<Card style={{width:'500px',height:'150px',marginLeft:'16%',marginTop:'3%'}}>
-<img src={`${BaseUrl}/images/certificate.png`} style={{marginLeft:'5%',marginTop:'8%'}} ></img>
-<Typography style={{marginLeft:'22%',fontSize:'15px',marginTop:'-12%',color:'#263475'}}>Certificate after Completion of Training:</Typography> 
-
-<CardContent style={{marginLeft:'20%',marginTop:'-2%',color:'#263475',fontSize:'13px'}}> After the successful completion of training, the trainee will be awarded with Certificates. </CardContent>
-
-   </Card>
-   <Card style={{width:'500px',height:'150px' ,marginLeft:'2%',marginTop:'3%'}}>
-   <img src={`${BaseUrl}/images/question.png`} style={{marginLeft:'5%',marginTop:'8%'}} ></img>
-
-<Typography style={{fontSize:'15px',marginTop:'-10%',marginLeft:'17%',color:'#263475'}}>Live Support 24*7:</Typography> 
-
-<CardContent style={{marginLeft:'15%',marginTop:'-2%',color:'#263475',fontSize:'13px'}}> A human who is ridiculously committed to answer all your queries. </CardContent>
-
-   </Card >
-   </Grid>
-
-   <Grid container spacing={24}>
-<Card style={{width:'500px',height:'150px',marginLeft:'16%',marginTop:'3%'}}>
-<img src={`${BaseUrl}/images/user.png`} style={{marginLeft:'5%',marginTop:'8%'}} ></img>
-
-<Typography style={{marginLeft:'22%',fontSize:'15px',marginTop:'-12%',color:'#263475'}}>Project Development during Training:</Typography>
-
-<CardContent  style={{marginLeft:'20%',marginTop:'-2%',color:'#263475',fontSize:'13px',}}> This training will be a project based training. 
-Trainee will be having a project after the completion of Training. </CardContent>
-
-   </Card>
-   <Card style={{width:'500px',height:'150px',marginLeft:'2%',marginTop:'3%'}}>
-   <img src={`${BaseUrl}/images/exercise.png`} style={{marginLeft:'5%',marginTop:'5%'}} ></img>
-
-<Typography style={{marginLeft:'22%',fontSize:'15px',marginTop:'-14%',color:'#263475'}}>Exercises & Assignment:</Typography> 
-
-<CardContent style={{marginLeft:'20%',marginTop:'-2.5%',color:'#263475',fontSize:'13px'}}> This training will be packed with daily dose of assignments
- so that it brings more clarity in understanding the concepts during training. </CardContent>
-
-   </Card>
-   </Grid>
-  </Paper>
- 
-
-
-
-
-
-
-
-          
-      </div>
+    </div>
     );
   }
 }
