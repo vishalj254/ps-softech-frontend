@@ -3,6 +3,7 @@
 
 const axios=require('axios')
 const BaseUrl="http://localhost:3001"
+const ClientURL="http://localhost:3001"
 const postDataAndImage=async(url,formData,config)=>{
     try{
         const response=await axios.post(`${BaseUrl}/${url}`,formData,config)
@@ -43,4 +44,4 @@ const postData=async(url,body)=>{
       return(false)
       }
 }
-export{getData,postDataAndImage,BaseUrl,postData}
+export{getData,postDataAndImage,BaseUrl,postData,ClientURL}

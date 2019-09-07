@@ -20,6 +20,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import { getData, BaseUrl } from '../../../../FetchServices';
+
 const styles = theme => ({
     paper:{
 backgroundColor:'#263475',
@@ -65,38 +66,39 @@ class Python extends React.Component {
           </Paper>
           </center>
 
-          <Card style={{width:'100%',height:'50%',marginTop:'2%',flexDirection:'row'}}>
-          <Typography style={{fontSize:'20px',marginLeft:'23%', borderBottom:'#263475 1px dotted',width:'43%'}}>
-<b>Python Programing for Data Science:</b>
 
+
+          <Card style={{width:'100%',height:'50%',marginTop:'2%',flexDirection:'row'}}>
+          <Typography style={{fontSize:'20px',marginLeft:'30%',width:'35%',color:'#263475',borderBottom:'#263475 1px dotted'}}><b>Python Programing for Data Science:</b>
 </Typography>
 <Grid  container spacing={32}>
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
-<img src={`${BaseUrl}/images/dot.png`}  style={{height:'20px',marginTop:'15px',marginLeft:'1%'}}></img><p  style={{marginLeft:'1%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Campusshala Python programming certification course enables you to learn Python from scratch.</p></Grid>
-           <Grid item xs={6} style={{marginTop:'1%',display:'flex', fontSize:'13px'}}>
-           <img src={`${BaseUrl}/images/dot.png`}  style={{height:'20px',marginTop:'%'}}></img> <p style={{fontSize:'13px',textAlign:'auto',marginLeft:'',color:'black',marginTop:'-3px'}}>The 6-week training program covering essential concepts on the building blocks of Python, data operations,  file operations, object-oriented programming and various Python libraries such as Pandas, Numpy, Matplotlib which are essential for Data Science. </p>
- </Grid>
+<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Campusshala Python programming certification course enables you to learn Python from scratch.</p></Grid>
+           
+<Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
+<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>The 6-week training program covering essential concepts on the building blocks of Python, data operations,  file operations, object-oriented programming and various Python libraries such as Pandas, Numpy, Matplotlib which are essential for Data Science. </p></Grid>
+  
  </Grid>
  <Grid  container spacing={32}>
-<Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
-<img src={`${BaseUrl}/images/dot.png`}  style={{height:'20px',marginTop:'15px',marginLeft:'1%'}}></img><p style={{fontSize:'13px',marginLeft:'8%',marginTop:'-6%'}}> For the practical exposure, this training program will come with assignments, assessment tests, code challenges, quizzes, and exercisesassessment tests code challenges, quizzes, and exercises.</p><p style={{marginLeft:'8%',marginTop:'-4%'}}> </p> 
-</Grid>
+
+<Grid item xs={6}>
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>For the practical exposure, this training program will come with assignments, assessment tests, code challenges, quizzes, and exercisesassessment tests code challenges, quizzes, and exercises.     
+           </p>
+ </Grid>
+
            <Grid item xs={6}>
-           <img src={`${BaseUrl}/images/dot.png`}  style={{height:'20px',marginTop:'10px',fontSize:'13px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%' ,fontSize:'13px'}}> At the end of this training program, you will build a live project with you. Doubt clearing session will be available for you 1 hour per day on daily basis.
-
-
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>At the end of this training program, you will build a live project with you. Doubt clearing session will be available for you 1 hour per day on daily basis.
            </p>
  </Grid>
  </Grid>
             </Card>
-          
-          
+
           <Typography style={{textAlign:'center',marginTop:'2%',fontSize:'20px',color:'#264375'}}><b> Course Content </b></Typography>
 
       <Card style={{width:'80%',height:'50%',marginLeft:'10%', marginTop:'1%'}} >
          
       <Typography style={{fontSize:'25px',fontWeight:"bold",marginLeft:"5%",marginTop:'2%',color:'#264375'}}>Python<span> 
-<Button style={{fontSize:'20px',marginTop:'2%'}} href="http://localhost:3001/pdf/Node.rar" >
+<Button style={{fontSize:'20px',marginTop:'2%'}} href="/pdf/Python.rar" >
  <b style={{fontSize:'10px',color:'#264375'}}><img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img>Download Syllabus</b>
 </Button>
 

@@ -87,39 +87,36 @@ handleChange = panel => (event, expanded) => {
 
 
          <Card style={{width:'100%',height:'50%',marginTop:'2%',flexDirection:'row'}}>
-          <Typography style={{fontSize:'20px',marginLeft:'4%',color:'#263475',textAlign:'center',marginLeft:'35%',width:'32%',borderBottom:'#263475 1px dotted'}}><b>About Java Programming</b>
+          <Typography style={{fontSize:'20px',marginLeft:'30%',width:'35%',color:'#263475',borderBottom:'#263475 1px dotted'}}><b>About Java Programming</b>
 </Typography>
 <Grid  container spacing={32}>
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
-<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px',marginLeft:'1%'}}>
-  </img><p  style={{marginLeft:'1%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px',color:'#263475'}}>A 6-week online training program by Campusshala will cover all the topics of Java which includes basics of Java, oops concepts, exception handling, multithreading, collection framework </p></Grid>
-
-
-           <Grid item xs={6} style={{marginTop:'1%',display:'flex', fontSize:'13px'}}>
-           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'%'}}></img> <p style={{fontSize:'13px',textAlign:'auto',color:'black',marginTop:'-3px',color:'#263475'}}> Webscripting like HTML, CSS, JQuery, JSON, JDBC, Servlets, Introduction to Spring Boot, Install the Spring Boot Command Line Interface, Build and deploy Spring Boot Applications, understand the best practices in designing RESTful web services,learn to connect web services to a Database using JPA and Hibernate with Spring Boot.</p>
- </Grid>
+<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>A 6-week online training program by Campusshala will cover all the topics of Java which includes basics of Java, oops concepts, exception handling, multithreading, collection framework.</p></Grid>
+           
+<Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
+<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Webscripting like HTML, CSS, JQuery, JSON, JDBC, Servlets, Introduction to Spring Boot, Install the Spring Boot Command Line Interface, Build and deploy Spring Boot Applications, understand the best practices in designing RESTful web services,learn to connect web services to a Database using JPA and Hibernate with Spring Boot.</p></Grid>
+  
  </Grid>
  <Grid  container spacing={32}>
+
 <Grid item xs={6}>
-<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'0px'}}></img><p style={{fontSize:'13px',marginLeft:'8%',marginTop:'-6%',color:'#263475'}}>For a great hands on learning experience, this training program is packed with assignments, assessment tests, code challenges, quizzes, and exercises.</p>{/* <p style={{marginLeft:'8%',marginTop:'-4%'}}>concepts such as Conditional branching,Looping</p> <p style={{marginLeft:'8%',marginTop:'-4%'}}>Statemen ts,functions,Understanding of NPM,</p><p style={{marginLeft:'8%',marginTop:'-4%'}}>ExceptionHandling,Session Handling,Working with</p> <p style={{marginLeft:'8%',marginTop:'-4%'}}>Json </p>          
- */}</Grid>
-
-
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>For a great hands on learning experience, this training program is packed with assignments, assessment tests, code challenges, quizzes, and exercises.     
+           </p>
+ </Grid>
 
            <Grid item xs={6}>
-           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px',fontSize:'13px'}}></img><p style={{ marginLeft:'6%',marginTop:'-6%' ,color:'#263475',fontSize:'13px'}}> At the end of this training program, you will be having a project which will be value addition in your resume. For doubt clearing, you would get 1-hour live chat support with the trainer every day. You can also use the Q&A forum provided.</p>
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>At the end of this training program, you will be having a project which will be value addition in your resume. For doubt clearing, you would get 1-hour live chat support with the trainer every day. You can also use the Q&A forum provided.
+           </p>
  </Grid>
  </Grid>
             </Card>
-
-
 
             <Typography style={{fontSize:'20px',textAlign:'center',marginTop:'2%',color:'#263475',textAlign:'center'}}><b> Course Content </b></Typography>
 
 <Card style={{width:'80%',height:'50%',marginLeft:'10%', marginTop:'1%'}} >
    <Typography style={{fontSize:'20px',marginTop:'2%',marginLeft:'6%',color:'#263475'}}><b> Core Java </b><span> 
-<Button style={{fontSize:'10px',marginTop:'2%'}}href="/Pdf/Node.pdf" >
-<img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img> <b style={{fontSize:'10px',color:'#264375'}}></b>
+<Button style={{fontSize:'20px',marginTop:'2%'}} href="/pdf/Java.rar" >
+ <b style={{fontSize:'10px',color:'#264375'}}><img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img>Download Syllabus</b>
 </Button>
 
 </span></Typography>
@@ -488,6 +485,7 @@ Spring Boot Web Development And Rest Services </b></Typography>
  </ExpansionPanelDetails>
 </ExpansionPanel>
   </Card>
+  <br/>
     </div>
     );
   }

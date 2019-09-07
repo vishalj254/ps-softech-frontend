@@ -6,7 +6,7 @@ import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
 
 const backgroundImage =
-  'https://www.seedinfotech.com/wp-content/uploads/2018/06/seed-infotech-home-slider-1.jpg';
+  '/images/home-slider-1.jpg';
 
 const styles = theme => ({
   background: {
@@ -55,7 +55,7 @@ function ProductHero(props) {
         Register
       </Button> */}
       <img
-          src="https://www.seedinfotech.com/wp-content/uploads/2018/06/nsdc-logo.png"
+          src="/images/MSME.jpg"
           alt="wonder"
           width="147"
           height="80"

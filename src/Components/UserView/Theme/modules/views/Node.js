@@ -102,17 +102,21 @@ handleChange = panel => (event, expanded) => {
 <Grid  container spacing={32}>
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
 <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Are you a developer looking to build a scalable web applications at lightning speed?	 </p></Grid>
-           <Grid item xs={6} style={{marginTop:'1%',display:'flex'}}>
-           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'%'}}></img> <p style={{fontSize:'13px',textAlign:'justify',marginLeft:'1%',color:'black',marginTop:'-3px'}}> Campusshala’s Node and react Js training enables you to build network applications 
-            quickly and efficiently</p>
- </Grid>
+           
+<Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
+<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Campusshala’s Node and react Js training enables you to build network applications 
+            quickly and efficiently</p></Grid>
+  
  </Grid>
  <Grid  container spacing={32}>
+
 <Grid item xs={6}>
-<img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'0px'}}></img><p style={{fontSize:'13px',marginLeft:'8%',marginTop:'-6%'}}><br/> This course helps you to gain an in-depth knowledge of<br/>concepts such as Conditional branching,Looping<br/>Statements,functions,Understanding of NPM,<br/>ExceptionHandling,Session Handling,Working with<br/>Json       </p> 
-</Grid>
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>This course helps you to gain an in-depth knowledge of concepts such as Conditional branching, Looping Statements, functions, Understanding of NPM, ExceptionHandling, Session Handling, Working with Json       
+           </p>
+ </Grid>
+
            <Grid item xs={6}>
-           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}> This course helps you to gain an in-depth knowledge of<br/>Express Framework,Working with react,State Management<br/>Working with React Routers Switching between<br/>Components,Code Splitting,Server Side Redering etc.
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}> This course helps you to gain an in-depth knowledge of Express Framework,Working with react,State Management Working with React Routers Switching between Components,Code Splitting,Server Side Redering etc.
            </p>
  </Grid>
  </Grid>
@@ -123,8 +127,8 @@ handleChange = panel => (event, expanded) => {
 
       <Card style={{width:'80%',height:'50%',marginLeft:'10%', marginTop:'1%'}} >
          <Typography style={{fontSize:'20px',marginTop:'2%',marginLeft:'3%',color:'#264375'}}><b> WEB-SCRIPTING </b><span> 
-<Button style={{fontSize:'10px',marginTop:'2%'}}href="/Pdf/Node.pdf" >
-<img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img> <b style={{fontSize:'10px',color:'#264375'}}></b>
+<Button style={{fontSize:'20px',marginTop:'2%'}} href="/pdf/Node.rar" >
+ <b style={{fontSize:'10px',color:'#264375'}}><img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img>Download Syllabus</b>
 </Button>
 
 </span></Typography>
@@ -233,7 +237,7 @@ handleChange = panel => (event, expanded) => {
        <p>1.3	Understanding localhost server </p>
 	<p>1.4 Starting Node.js </p>
 <p>	1.5 Node.js  syntax and variables </p>
-<p>	Operators and Expressions </p>
+<p>	1.6 Operators and Expressions </p>
 <p>	1.7 Conditional Branching and Looping Statements</p>
 <p>	1.8Learning Arrays in Node.js</p>
              </div>      
@@ -294,7 +298,7 @@ handleChange = panel => (event, expanded) => {
         </ExpansionPanel>
         <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel9'} onChange={this.handleChange('panel9')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 6: Working with  JSON 
+         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 5: Working with  JSON 
 </b></Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -308,33 +312,34 @@ handleChange = panel => (event, expanded) => {
         </ExpansionPanel>
         <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel10'} onChange={this.handleChange('panel10')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 7: Express Framework 
+         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 6: Express Framework 
 </b></Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
            <div style={{fontSize:'12px',color:'#264375'}}>
-           <p>7.1 Introduction to  Express Frameworks</p> 
-<p>	7.2 Working with Express Framework </p> 
-<p>	7.3 Routing </p>
-<p>	7.4 Routes,Views and Public Assets</p> 
-<p>	7.6 Helpers and Modules</p>
-<p>	7.7 FormValidation </p><p>7.8 FetchingData using </p>
-<p>	7.9 Session </p>
-<p>	7.10 Database 
+           <p>6.1 Introduction to  Express Frameworks</p> 
+<p>	6.2 Working with Express Framework </p> 
+<p>	6.3 Routing </p>
+<p>	6.4 Routes,Views and Public Assets</p> 
+<p>	6.5 Helpers and Modules</p>
+<p>	6.6 FormValidation </p>
+<p> 6.7 FetchingData using </p>
+<p>	6.8 Session </p>
+<p>	6.9 Database 
 </p>
           </div>      
           </ExpansionPanelDetails>
         </ExpansionPanel>
         <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel11'} onChange={this.handleChange('panel11')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 8: Payment Gateway, E-mail and Social Media Networks 
+         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 7: Payment Gateway, E-mail and Social Media Networks 
 </b></Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
            <div style={{fontSize:'12px',color:'#264375'}}>
-            <p>8.1 Integration of payment gateway </p>
-          <p>	8.2 Integrating emails to web application </p>
-<p>	8.3 Integrating social media networks to web application 
+            <p>7.1 Integration of payment gateway </p>
+          <p>	7.2 Integrating emails to web application </p>
+<p>	7.3 Integrating social media networks to web application 
            </p>
           </div>      
           </ExpansionPanelDetails>
@@ -342,13 +347,13 @@ handleChange = panel => (event, expanded) => {
    
         <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel12'} onChange={this.handleChange('panel12')}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 9: Web Security </b></Typography>
+         {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 8: Web Security </b></Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
            <div style={{fontSize:'12px',color:'#264375'}}>
-            <p>	10.1 Data Validation </p>  
-          <p>	10.2 SQL Injection </p>
-<p>10.3 Cross Site Scripting
+            <p>	8.1 Data Validation </p>  
+          <p>	8.2 SQL Injection </p>
+<p>8.3 Cross Site Scripting
 
  
            </p>
@@ -387,7 +392,7 @@ handleChange = panel => (event, expanded) => {
      </ExpansionPanel>
      <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel15'} onChange={this.handleChange('panel15')}>
        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-      {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section3: Data Definition Language (DDL)  </b></Typography>
+      {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 3: Data Definition Language (DDL)  </b></Typography>
        </ExpansionPanelSummary>
        <ExpansionPanelDetails>
         <div style={{fontSize:'12px',color:'#264375'}}>
@@ -399,7 +404,7 @@ handleChange = panel => (event, expanded) => {
      </ExpansionPanel>
      <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel16'} onChange={this.handleChange('panel16')}>
        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-      {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section4: Sub-Queries, Joins and Unions with MySQL  </b></Typography>
+      {this.state.save}<Typography style={{marginTop:'0.25%',color:'#264375'}}><b>Section 4: Sub-Queries, Joins and Unions with MySQL  </b></Typography>
        </ExpansionPanelSummary>
        <ExpansionPanelDetails>
         <div style={{fontSize:'12px',color:'#264375'}}>

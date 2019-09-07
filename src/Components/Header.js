@@ -77,7 +77,7 @@ function Header(props) {
               <IconButton color="inherit" className={classes.iconButtonAvatar}>
                 <Avatar
                   className={classes.avatar}
-                  src="https://media.licdn.com/dms/image/C5603AQH8t56ixgIsYw/profile-displayphoto-shrink_200_200/0?e=1569456000&v=beta&t=b9Ex-92wPrOugvhdqLpbl9BPmTru5XYntqIzLUdjQBQ"
+                  src="/images/sandeepsappal.jpg"
                   alt="My Avatar"
                 />
               </IconButton>

@@ -11,6 +11,7 @@
     "markdown-to-jsx": "^6.10.3",
     "material-table": "^1.50.0",
     "mdbreact": "^4.19.1",
+    "otp-input-react": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-custom-scrollbars": "^4.2.1",

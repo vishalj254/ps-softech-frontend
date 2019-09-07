@@ -11,8 +11,10 @@ import { getData, BaseUrl,postData } from '../../../../FetchServices';
 
 const useStyles = makeStyles({
   card: {
-    maxWidth: 310,
-    margin: 10
+    // maxWidth: 310,
+    margin: 10,
+    width: 310
+
   },
   root:{
     display:'flex',
