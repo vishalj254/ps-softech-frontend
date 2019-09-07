@@ -224,8 +224,8 @@ class.</p>
  </ExpansionPanelSummary>
  <ExpansionPanelDetails>
   <div style={{fontSize:'12px',color:'#263475'}}>
-<p><img src='/images/cocubes.jpg'/><h1>CoCubes</h1></p>
-<p><img src='/images/conceptcampus.png'/><h1>Concept Campus</h1></p>
+<p><h2><u>CoCubes.com</u></h2><img src='/images/cocubes.jpg'/></p>
+<p><h2><u>Concept Campus</u></h2><img src='/images/conceptcampus.png'/></p>
 </div>      
  </ExpansionPanelDetails>
 </ExpansionPanel>
