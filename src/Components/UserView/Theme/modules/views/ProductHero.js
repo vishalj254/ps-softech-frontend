@@ -41,7 +41,7 @@ function ProductHero(props) {
       </Typography>
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         80,000+ Students trained, 500+ Recruiting Clients<br/>
-        NSDC Training Partner
+        MSME Training Partner
         
       </Typography>
       {/* <Button
