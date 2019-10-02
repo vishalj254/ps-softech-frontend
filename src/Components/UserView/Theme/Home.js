@@ -23,13 +23,16 @@ import CRT from './modules/views/CRT'
 import Terms from './Terms'
 import Privacy from './Privacy'
 import { makeStyles } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
+import Header from '../../Header'
 
 const useStyles = makeStyles(theme => ({
   mainroot:{
-    overflow: 'hidden',  
+    overflow: 'hidden',
         flexGrow: 1,
   }
 }));
+const drawerWidth = 256;
 
 function Index() {
 
@@ -63,7 +66,7 @@ function Index() {
     else if(Views=='C++'){
       setView(<Cpp/>)
     }
-    else if(Views=='Campus Recruitment Training'){
+    else if(Views=='Blockchain'){
       setView(<CRT/>)
     }
     else if(Views=='TERMS'){
@@ -75,9 +78,31 @@ function Index() {
   }
   const [view,setView]=React.useState(<div><ProductHero /><ProductValues /><ProductCategories setViews={setViews}/><Placements/><ProductCTA /><ProductSmokingHero /></div>)
   // <Testimonials/>
+  const [state,setState] = React.useState({
+    mobileOpen: false,
+  });
+  const handleDrawerToggle = () => {
+    setState({ mobileOpen: !state.mobileOpen });
+  };
   return (<div className={classes.mainroot}>
     <React.Fragment>
       <AppAppBar setViews={setViews}/>
+    {/*<nav className={classes.drawer}>
+      <Hidden smUp implementation="js">
+        <AppAppBar
+          // PaperProps={{ style: { width: drawerWidth } }}
+          variant="temporary"
+          open={state.mobileOpen}
+          onClose={handleDrawerToggle}
+          setViews={setViews}
+        />
+      </Hidden>
+      <Hidden xsDown implementation="css">
+        <AppAppBar PaperProps={{ style: { width: drawerWidth } }}  setViews={setViews}/>/>
+        {/*PaperProps={{ style: { width: drawerWidth } }} */}
+      {/*</Hidden>
+    </nav>
+    <Header onDrawerToggle={handleDrawerToggle} /> */}
       {view}
       <AppFooter setViews={setViews}/>
     </React.Fragment>

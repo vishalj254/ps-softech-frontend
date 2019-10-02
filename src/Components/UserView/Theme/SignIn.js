@@ -1,12 +1,11 @@
 import withRoot from './modules/withRoot';
 // --- Post bootstrap -----
 import React from 'react';
-import { Field, Form, FormSpy } from 'react-final-form';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
+import { Field, Form, FormSpy } from 'react-final-form';
 import Typography from './modules/components/Typography';
-import AppFooter from './modules/views/AppFooter';
-import AppAppBar from './modules/views/AppAppBar';
 import AppForm from './modules/views/AppForm';
 import { email, required } from './modules/form/validation';
 import RFTextField from './modules/form/RFTextField';
@@ -47,6 +46,16 @@ function SignIn(props) {
     setSent(true);
   };
 
+  const handleClick=()=>{
+    props.setViews("SIGNUP",'0')
+  }
+
+  const handleCheck=values=>{
+    const errors = required(['email', 'password'], values);
+    alert(errors.email+" , "+errors.password)
+  }
+
+
   return (
     <React.Fragment>
       <AppForm>
@@ -55,8 +64,8 @@ function SignIn(props) {
             Sign In
           </Typography>
           <Typography variant="body2" align="center">
-            {'Not a member yet? '}
-            <Link onClick={()=>props.setViews("SIGNUP",'0')} align="center" underline="always">
+          {'Not a member yet? '}
+            <Link href="#" onClick={handleClick} underline="always">
               Sign Up here
             </Link>
           </Typography>
@@ -68,7 +77,6 @@ function SignIn(props) {
                 autoComplete="email"
                 autoFocus
                 component={RFTextField}
-                disabled={submitting || sent}
                 fullWidth
                 label="Email"
                 margin="normal"
@@ -99,18 +107,20 @@ function SignIn(props) {
               </FormSpy>
               <FormButton
                 className={classes.button}
-                disabled={submitting || sent}
+                // disabled={submitting || sent}
                 size="large"
                 color="secondary"
                 fullWidth
+                onClick={()=>handleCheck()}
               >
-                {submitting || sent ? 'In progress…' : 'Sign In'}
+              Sign In
+                {/* {submitting || sent ? 'In progress…' : 'Sign In'} */}
               </FormButton>
             </form>
           )}
         </Form>
         <Typography align="center">
-          <Link underline="always" href="/premium-themes/onepirate/forgot-password/">
+          <Link underline="always" href="#">
             Forgot password?
           </Link>
         </Typography>

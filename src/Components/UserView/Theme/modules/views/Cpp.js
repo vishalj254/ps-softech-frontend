@@ -33,7 +33,7 @@ backgroundColor:'blue',
     media: {
       height: 140,
     },
-    
+
 })
 
 class Cpp extends React.Component {
@@ -45,7 +45,7 @@ class Cpp extends React.Component {
     append:'',
     expanded: null,
     sh:'',
-  
+
   };
 Display=()=>{
   if(this.state.Edit=='ViewMore')
@@ -56,7 +56,7 @@ this.setState({Edit:'ViewLess'})
   {
 this.setState({Edit:'ViewMore'})
   }
- 
+
 }
 handleChange = panel => (event, expanded) => {
   this.setState({
@@ -91,15 +91,15 @@ handleChange = panel => (event, expanded) => {
 <Grid  container spacing={32}>
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
 <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>A 6-week online training program by Campusshala will cover all the topics of Java which includes basics of Java, oops concepts, exception handling, multithreading, collection framework.</p></Grid>
-           
+
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
 <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Webscripting like HTML, CSS, JQuery, JSON, JDBC, Servlets, Introduction to Spring Boot, Install the Spring Boot Command Line Interface, Build and deploy Spring Boot Applications, understand the best practices in designing RESTful web services,learn to connect web services to a Database using JPA and Hibernate with Spring Boot.</p></Grid>
-  
+
  </Grid>
  <Grid  container spacing={32}>
 
 <Grid item xs={6}>
-           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>For a great hands on learning experience, this training program is packed with assignments, assessment tests, code challenges, quizzes, and exercises.     
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>For a great hands on learning experience, this training program is packed with assignments, assessment tests, code challenges, quizzes, and exercises.
            </p>
  </Grid>
 
@@ -113,14 +113,14 @@ handleChange = panel => (event, expanded) => {
             <Typography style={{fontSize:'20px',textAlign:'center',marginTop:'2%',color:'#263475',textAlign:'center'}}><b> Course Content </b></Typography>
 
 <Card style={{width:'80%',height:'50%',marginLeft:'10%', marginTop:'1%'}} >
-   <Typography style={{fontSize:'20px',marginTop:'2%',marginLeft:'6%',color:'#263475'}}><b> C++ Language </b><span> 
+   <Typography style={{fontSize:'20px',marginTop:'2%',marginLeft:'6%',color:'#263475'}}><b> C++ Language </b><span>
 <Button style={{fontSize:'20px',marginTop:'2%'}} href="/pdf/Cpp.rar" >
  <b style={{fontSize:'10px',color:'#264375'}}><img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img>Download Syllabus</b>
 </Button>
 
 </span></Typography>
 
-      
+
 <ExpansionPanel  style={{height:'7%',marginTop:'2%'}} expanded={expanded === 'panel20'} onChange={this.handleChange('panel20')}>
  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 {this.state.save}<Typography style={{marginTop:'0.25%',color:'#263475'}}><b>Section 1: Introduction to C++</b></Typography>
@@ -135,7 +135,7 @@ handleChange = panel => (event, expanded) => {
 <p>1.6 The basic anatomy of a C++ program</p>
 <p>1.7 Starting with a simple ͞Hello World͟ program</p>
 <p>1.8 Compiling, linking and running a C++ program</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -151,7 +151,7 @@ handleChange = panel => (event, expanded) => {
 <p>2.4 Data Binding</p>
 <p>2.5 Encapsulation</p>
 <p>2.6 Classes, subclasses and Objects</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel22'} onChange={this.handleChange('panel22')}>
@@ -171,7 +171,7 @@ handleChange = panel => (event, expanded) => {
  • Formatted input – cin<br/>
  • Formatted output – cout<br/>
  • Use of insertion and extraction operators</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -189,7 +189,7 @@ handleChange = panel => (event, expanded) => {
 <p>4.6 Concept of variable scope and scope rules</p>
 <p>4.7 Static and automatic variables</p>
 <p>4.8 Global variables </p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -214,8 +214,8 @@ handleChange = panel => (event, expanded) => {
 <p>5.4 Pointer to an Array</p>
 <p>5.5 Array of pointers</p>
 <p>5.6 Strings</p>
- 
-</div>      
+
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -243,7 +243,7 @@ handleChange = panel => (event, expanded) => {
  <p>6.11 Friend class and friendly functions</p>
  <p>6.12 Returning objects</p>
  <p>6.13 Arrays of Objects</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -276,13 +276,13 @@ handleChange = panel => (event, expanded) => {
  • Class to basic type<br/>
  • Class to another class type</p>
 
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
 <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel27'} onChange={this.handleChange('panel27')}>
  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-{this.state.save}<Typography style={{marginTop:'0.25%',color:'#263475'}}><b>Section 8: Reusing classes 
+{this.state.save}<Typography style={{marginTop:'0.25%',color:'#263475'}}><b>Section 8: Reusing classes
  </b></Typography>
  </ExpansionPanelSummary>
  <ExpansionPanelDetails>
@@ -296,7 +296,7 @@ handleChange = panel => (event, expanded) => {
 <p>8.7 Multiple & Multilevel Inheritance</p>
 <p>8.8 Calling base class constructor</p>
 <p>8.9 Overriding base class members</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -312,7 +312,7 @@ handleChange = panel => (event, expanded) => {
 <p>9.4 Pure virtual functions</p>
 <p>9.5 Static and Dynamic Binding</p>
 <p>9.6 Virtual base classes</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -326,7 +326,7 @@ handleChange = panel => (event, expanded) => {
 <p>10.2 Function templates</p>
 <p>10.3 Class templates</p>
 <p>10.4 Exception handling</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -339,7 +339,7 @@ handleChange = panel => (event, expanded) => {
 <p>11.1 Console I/O Opration Formatted & Unformatted,<br/>
 IStream, FStream, SStream Classes,<br/>
 Method Write (), Read (), Get (), Put (), E.t.c, </p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -354,7 +354,7 @@ Method Write (), Read (), Get (), Put (), E.t.c, </p>
 <p>12.3 Types of Objects</p>
 <p>12.4 OOA & OOD</p>
 <p>12.5 UML</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -367,6 +367,5 @@ Method Write (), Read (), Get (), Put (), E.t.c, </p>
 Cpp.propTypes = {
     classes: PropTypes.object.isRequired,
   };
-  
+
   export default withStyles(styles)(Cpp);
-  

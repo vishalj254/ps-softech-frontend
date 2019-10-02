@@ -16,7 +16,7 @@ export default function AdminRouter(props){
         <Router>
             <div>
             <div>
-                <Route path='/AdminLogin' exact strict component={AdminLogin} history={props.history}/>
+                <Route path='/AdminLogin/admin/admin' exact strict component={AdminLogin} history={props.history}/>
                 <Route path='/Dashboard' exact strict component={Paperbase} history={props.history}/>
                 <Route path='/' exact strict component={Home} history={props.history}/>
                 <Route path='/display' exact strict component={DisplayProgram} history={props.history}/>

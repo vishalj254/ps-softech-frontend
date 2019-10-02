@@ -12,7 +12,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import PeopleIcon from '@material-ui/icons/People';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 // import DnsRoundedIcon from '@material-ui/icons/DnsRounded';
-// import PermMediaOutlinedIcon from '@material-ui/icons/PhotoSizeSelectActual';
+// import PermMediaOutlinedIcon yyfrom '@material-ui/icons/PhotoSizeSelectActual';
 // import PublicIcon from '@material-ui/icons/Public';
 // import SettingsEthernetIcon from '@material-ui/icons/SettingsEthernet';
 // import SettingsInputComponentIcon from '@material-ui/icons/SettingsInputComponent';
@@ -33,6 +33,11 @@ import DisplayUploadProgram from './DisplayUploadProgram';
 import PlacedStudent from './PlacedStudent';
 // import AdminRouter from './AdminRouter'
 import DisplayPlacedStudent from './DisplayPlacedStudent';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Typography from '@material-ui/core/Typography';
 
 
 const styles = theme => ({
@@ -75,6 +80,13 @@ const styles = theme => ({
   divider: {
     marginTop: theme.spacing(2),
   },
+  root: {
+    width: '100%',
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
 });
 
 function Navigator(props) {
@@ -103,7 +115,7 @@ function Navigator(props) {
             Project Overview
           </ListItemText>
         </ListItem> */}
-        
+
           <React.Fragment className={clsx(classes.item && classes.itemActiveItem)}>
             <ListItem className={classes.categoryHeader}>
               <ListItemText
@@ -114,8 +126,18 @@ function Navigator(props) {
                 Dashboard
               </ListItemText>
             </ListItem>
-            
-            
+
+
+        <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Expansion Panel 1</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails style={{display:'flex',flexWrap:'wrap'}}>
+
             <ListItem
                 button
                 className={clsx(classes.item && classes.itemActiveItem)}
@@ -178,7 +200,7 @@ function Navigator(props) {
                 </ListItemText>
               </ListItem>
 
-              
+
               <ListItem
                 button
                 className={clsx(classes.item && classes.itemActiveItem)}
@@ -270,6 +292,10 @@ function Navigator(props) {
                 </ListItemText>
               </ListItem>
 
+
+              </ExpansionPanelDetails>
+            </ExpansionPanel>
+
               <ListItem
                 button
                 className={clsx(classes.item && classes.itemActiveItem)}
@@ -287,12 +313,12 @@ function Navigator(props) {
 
             <Divider className={classes.divider} />
           </React.Fragment>
-        
+
       </List>
     </Drawer>
   );
 
-  
+
 }
 
 Navigator.propTypes = {

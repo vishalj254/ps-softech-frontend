@@ -103,7 +103,7 @@ function Header(props) {
             //   <Button className={classes.button} variant="outlined" color="inherit" size="small">
             //     Web setup
             //   </Button>
-            // </Grid> 
+            // </Grid>
             <Grid item>
               <Tooltip title="Help">
                 <IconButton color="inherit">
@@ -111,7 +111,7 @@ function Header(props) {
                 </IconButton>
             </Tooltip>*/}
             </Grid>
-          </Grid> 
+          </Grid>
         </Toolbar>
       </AppBar>
       <AppBar

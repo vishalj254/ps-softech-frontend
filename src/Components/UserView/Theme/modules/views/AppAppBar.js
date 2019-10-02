@@ -57,18 +57,42 @@ function AppAppBar(props) {
 
   const handleClick=(view)=>{
     props.setViews(view,'0')
+    {handleClose()}
   }
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
-  
+
   function handleMenu(event) {
     setAnchorEl(event.currentTarget);
   }
 
   function handleClose() {
     setAnchorEl(null);
+  }
+
+  const [buttonDownload,setButtonDownload]=React.useState('')
+
+  React.useEffect(()=>{
+    if(!(localStorage.getItem('ADMIN'))){
+      setButtonDownload(null)
+    }
+    else{
+      setButtonDownload(download())
+    }
+  },[])
+
+  const download=()=>{
+    return(<Link
+      color="inherit"
+      variant="h6"
+      underline="none"
+      className={classes.rightLink}
+      onClick={(event)=>handleClick('SIGNIN')}
+    >
+      {'Download'}
+    </Link>)
   }
 
   return (
@@ -86,6 +110,7 @@ function AppAppBar(props) {
           >
             {'PS Softech'}
           </Link>
+          {buttonDownload}
           <div className={classes.right}>
               <IconButton
                 aria-label="account of current user"
@@ -111,11 +136,11 @@ function AppAppBar(props) {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>User Login</MenuItem>
-                {/* <MenuItem onClick={handleClose}>My account</MenuItem> */} 
+                <MenuItem onClick={()=>handleClick('SIGNIN')}>User Login</MenuItem>
+                {/* <MenuItem onClick={handleClose}>My account</MenuItem> */}
               </Menu>
             </div>
-          <div className={classes.right}>
+          {/*<div className={classes.right}>
             <Link
               color="inherit"
               variant="h6"
@@ -133,7 +158,7 @@ function AppAppBar(props) {
             >
               {'Sign Up'}
             </Link>
-          </div>
+          </div>*/}
         </Toolbar>
       </AppBar>
       <div className={classes.placeholder} />

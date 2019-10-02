@@ -82,7 +82,7 @@ function Category(props) {
     const[technologyDescription,setTechnologyDescription]=React.useState('')
     const[Logo,setLogo]=React.useState({icon:'',file:''})
     const[message,setMessage]=React.useState('')
-    
+
     const addNewRecord=async()=>{
         let formData=new FormData();
         formData.append('technologyName',technologyName)
@@ -95,7 +95,7 @@ function Category(props) {
             const classes = useStyles1();
             const { className, message, onClose, variant, ...other } = props;
             const Icon = variantIcon[variant];
-          
+
             return (<div>
               <SnackbarContent
                 className={clsx(classes[variant], className)}
@@ -115,10 +115,10 @@ function Category(props) {
               /></div>
             );
           }
-        
+
         if(result)
         {
-           
+
          setTechnologyName('')
          setTechnologyDescription('')
          setLogo({icon:''})
@@ -138,7 +138,7 @@ function Category(props) {
                 variant="error"
                 className={classes.margin}
                 message="This is an error message!"
-            />    
+            />
             </div>)
         }
     }
@@ -180,9 +180,9 @@ function Category(props) {
                     />
 
                 </Grid>
-                
+
                 <Grid item xs={12} sm={6}>
-                 <input 
+                 <input
                  accept="image/*"
                  className={classes.input}
                  id="contained-button-file"
@@ -191,7 +191,7 @@ function Category(props) {
                     onChange={(event)=>setLogo({icon:URL.createObjectURL(event.target.files[0]),file:event.target.files[0]})}
                     fullWidth
                     />
-                
+
                 <label htmlFor="contained-button-file">
                     <Button variant="contained" component="span" className={classes.button} fullWidth>
                         Upload
@@ -213,14 +213,14 @@ function Category(props) {
                 </Button>
                 </Grid>
             </Grid>
-           
+
             </Paper>
             <Typography>
                {message}
                </Typography>
         </Container>
 
-        
+
     )
 }
 export default Category;

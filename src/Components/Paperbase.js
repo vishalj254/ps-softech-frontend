@@ -203,14 +203,14 @@ function Paperbase (props) {
 
   React.useEffect(()=>{
     if(!localStorage.getItem('ADMIN')){
-      props.history.replace({pathname:'/AdminLogin'})
+      props.history.replace({pathname:'/AdminLogin/admin/admin'})
     }
   },[])
 
   const changeView=(View)=>{
     if(View=='Logout'){
       localStorage.removeItem('ADMIN');
-      props.history.replace({pathname:'/AdminLogin'})
+      props.history.replace({pathname:'/AdminLogin/admin/admin'})
     }
     setView(View)
     handleDrawerToggle()
@@ -220,7 +220,7 @@ function Paperbase (props) {
     setState({ mobileOpen: !state.mobileOpen });
   };
 
- 
+
     return (
       <ThemeProvider theme={theme}>
         <div className={classes.root}>

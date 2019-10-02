@@ -28,6 +28,7 @@
     "react-window-size-listener": "^1.5.4",
     "react-year-picker": "^0.3.7",
     "reactable-search": "^0.2.50",
+    "reactide-config": "^1.0.2",
     "slick-carousel": "^1.8.1",
     "validator": "^11.1.0"
   },

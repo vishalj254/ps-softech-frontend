@@ -33,7 +33,7 @@ backgroundColor:'blue',
     media: {
       height: 140,
     },
-    
+
 })
 
 class CRT extends React.Component {
@@ -45,7 +45,7 @@ class CRT extends React.Component {
     append:'',
     expanded: null,
     sh:'',
-  
+
   };
 Display=()=>{
   if(this.state.Edit=='ViewMore')
@@ -56,7 +56,7 @@ this.setState({Edit:'ViewLess'})
   {
 this.setState({Edit:'ViewMore'})
   }
- 
+
 }
 handleChange = panel => (event, expanded) => {
   this.setState({
@@ -71,10 +71,10 @@ handleChange = panel => (event, expanded) => {
       <div style={{marginLeft:'2%',width:'96%'}}><center>
           <Paper style={{background:'#263475',width:'100%',marginTop:'2%',color:'#264375',}}>
     <Typography style={{fontSize:'40px',color:'white',marginRight:'-2%',paddingTop:'50px',marginTop:'-30px'}}>Campus Recruitment Training</Typography>
-    
+
       <Typography style={{color:'white',height:'100%',width:'50%',marginTop:'%',fontSize:'20px'}}><hr/>
       Duration:6 weeks | Certifited trainings
-      
+
 
       </Typography>
       <br/>
@@ -89,17 +89,17 @@ handleChange = panel => (event, expanded) => {
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
 <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>A 6-week training program by PS Softech will cover all the topics of CRT which includes Quantitative Aptitude, Logical Reasoning, Soft Skills.
 </p></Grid>
-           
+
 <Grid item xs={6} style={{fontSize:'13px',display:'flex'}}>
 <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'15px'}}></img><p  style={{marginLeft:'2%',textAlign:'flex',marginRight:'2%',paddingTop:'-10px'}}>Online/ Offline Test will be conduct
 after the completion of every topic.
 </p></Grid>
-  
+
  </Grid>
  <Grid  container spacing={32}>
 
 <Grid item xs={6}>
-           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>For a great hands on learning experience, this training program is packed with assignments, assessment tests, quizzes, and exercises.     
+           <img src={`${BaseUrl}/images/dot.png`} style={{height:'20px',marginTop:'10px'}}></img><p style={{ marginLeft:'6%' ,marginTop:'-6%',fontSize:'13px', }}>For a great hands on learning experience, this training program is packed with assignments, assessment tests, quizzes, and exercises.
            </p>
  </Grid>
 
@@ -115,14 +115,14 @@ Trained Students.
             <Typography style={{fontSize:'20px',textAlign:'center',marginTop:'2%',color:'#263475',textAlign:'center'}}><b> Course Content </b></Typography>
 
 <Card style={{width:'80%',height:'50%',marginLeft:'10%', marginTop:'1%'}} >
-   <Typography style={{fontSize:'20px',marginTop:'2%',marginLeft:'6%',color:'#263475'}}><b> Campus Recruitment Training Program </b><span> 
-<Button style={{fontSize:'20px',marginTop:'2%'}} href="/pdf/Crt.rar" >
+   <Typography style={{fontSize:'20px',marginTop:'2%',marginLeft:'6%',color:'#263475'}}><b> Campus Recruitment Training Program </b><span>
+<Button style={{fontSize:'20px',marginTop:'2%'}} href="/pdf/Blockchain.rar" >
  <b style={{fontSize:'10px',color:'#264375'}}><img src={`${BaseUrl}/images/download.png`}  style={{ marginTop:'-50%',height:'20px',width:'20px'}}></img>Download Syllabus</b>
 </Button>
 
 </span></Typography>
 
-      
+
 <ExpansionPanel  style={{height:'7%',marginTop:'2%'}} expanded={expanded === 'panel20'} onChange={this.handleChange('panel20')}>
  <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
 {this.state.save}<Typography style={{marginTop:'0.25%',color:'#263475'}}><b>Section 1: Quantitative Aptitude
@@ -154,7 +154,7 @@ Trained Students.
 <p>✓ Calender</p>
 <p>✓ Clocks</p>
 <p>✓ Height & Distances</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -174,7 +174,7 @@ Trained Students.
 <p>✓ Logical Venn Diagrams</p>
 <p>✓ Number, Ranking & Time Sequence Test</p>
 <p>✓ Data Sufficiency</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 <ExpansionPanel  style={{height:'7%'}} expanded={expanded === 'panel22'} onChange={this.handleChange('panel22')}>
@@ -195,7 +195,7 @@ Trained Students.
 <p>✓ Mock Group Discussions</p>
 <p>✓ Mock Interviews</p>
 <p>✓ Mock Recruitment Drive</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -214,7 +214,7 @@ Trained Students.</p>
 <p>4. Previous Year Question paper of
 various companies to be solved in the
 class.</p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -226,7 +226,7 @@ class.</p>
   <div style={{fontSize:'12px',color:'#263475'}}>
 <p><h2><u>CoCubes.com</u></h2><img src='/images/cocubes.jpg'/></p>
 <p><h2><u>Concept Campus</u></h2><img src='/images/conceptcampus.png'/></p>
-</div>      
+</div>
  </ExpansionPanelDetails>
 </ExpansionPanel>
 
@@ -239,6 +239,5 @@ class.</p>
 CRT.propTypes = {
     classes: PropTypes.object.isRequired,
   };
-  
+
   export default withStyles(styles)(CRT);
-  

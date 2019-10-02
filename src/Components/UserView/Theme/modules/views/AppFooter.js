@@ -91,10 +91,10 @@ export default function AppFooter(props) {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://facebook.com/" className={classes.icon}>
+                <a href="https://facebook.com/" target="_blank" className={classes.icon}>
                   <img src="https://material-ui.com/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
                 </a>
-                <a href="https://twitter.com/NumericInfoSystem" className={classes.icon}>
+                <a href="https://twitter.com/NumericInfoSystem" target="_blank" className={classes.icon}>
                   <img src="https://material-ui.com/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
                 </a>
               </Grid>
@@ -141,13 +141,13 @@ export default function AppFooter(props) {
           </Grid>
           <Grid item>
             <Typography variant="caption">
-              {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="nofollow" title="Freepik">
-                Freepik
+              {'All rights reserve under '}
+              <Link href="https://www.sandeepsappal.in" rel="nofollow" title="PS Softech">
+                PS Softech &cpy;
               </Link>
               {' from '}
               <Link href="https://www.flaticon.com" rel="nofollow" title="Flaticon">
-                www.flaticon.com
+                www.ps-softech.com
               </Link>
               {' is licensed by '}
               <Link
