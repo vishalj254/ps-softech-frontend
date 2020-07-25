@@ -3,9 +3,11 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography, Paper, Button, TextField, Grid } from '@material-ui/core'; 
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import {Avatar} from '@material-ui/core';
-import {postDataAndImage,getData} from './FetchServices'
+// import {Avatar} from '@material-ui/core';
+import {postDataAndImage,getData} from '../FetchServices'
 import {MenuItem} from '@material-ui/core';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 
 const useStyles = makeStyles(theme => ({
@@ -41,30 +43,31 @@ export default function UploadProgram1(props){
     const[technologyId,setTechnologyId]=React.useState('')
 	const[programName,setProgramName]=React.useState('')
 	const[programDescription,setProgramDescription]=React.useState('')
-	const[programIcon,setProgramIcon]=React.useState({icon:'',file:''})
+	const[programFiles,setProgramFiles]=React.useState({file:''})
 	const[message,setMessage]=React.useState('')
 
 	const addNewRecord=async()=>{
         await alert('hello')
-		// let formData=new FormData();
-		// formData.append('categoryId',categoryId)
-		// formData.append('subCategoryName',subCategoryName)
-		// formData.append('subCategoryDescription',subCategoryDescription)
-		// formData.append('subCategoryIcon',subCategoryIcon.file)
-		// const config={headers:{'content-type':'multipart/form-data'}};
-		// const result=await postDataAndImage('subcategory/addNewRecord',formData,config);
-		// if(result){
-		// 	setMessage('Record Submitted...')
-		// }
-		// else{
-		// 	setMessage('Fail to Submit Record...')
-		// }
+		let formData=new FormData();
+		formData.append('technologyId',technologyId)
+		formData.append('programName',programName)
+		formData.append('programDescription',programDescription)
+		formData.append('programFiles',programFiles.file)
+		const config={headers:{'content-type':'multipart/form-data'}};
+		const result=await postDataAndImage('uploadprogram/addNewProgram',formData,config);
+		if(result){
+			setMessage('Record Submitted...')
+		}
+		else{
+			setMessage('Fail to Submit Record...')
+		}
     }
     
     const clear=()=>{
         setTechnologyId('')
         setProgramName('')
-        setProgramDescription('')
+		setProgramDescription('')
+		setProgramFiles({file:''})
     }
 
 	const [getlist,setlist]=React.useState([])
@@ -85,33 +88,24 @@ export default function UploadProgram1(props){
     }
     
     const Change=(event)=>{
-        if(technologyId!=''){
+        if(technologyId!==''){
         return(
-            <Grid container>
+            <Grid container spacing={2}>
                 <Grid item xs={12}>
-						<TextField
-							id="outlined-dense"
-							label="Program Name"
-							className={clsx(classes.textField, classes.dense)}
-							margin="dense"
-                            variant="outlined"
-                            value={programName}
-							onChange={(event)=>setProgramName(event.target.value)}
-							fullWidth
-						/>
-					</Grid>   
-					<Grid item xs={12}>
-						<TextField
-							id="outlined-dense"
-							label="Program Description"
-							className={clsx(classes.textField, classes.dense)}
-							margin="dense"
-                            variant="outlined"
-                            value={programDescription}
-							onChange={(event)=>setProgramDescription(event.target.value)}
-							fullWidth
-						/>
-					</Grid>   
+                <ReactQuill value={programName}
+                    onChange={(event)=>setProgramName(event)} 
+					className={clsx(classes.textField)}
+					margin='dense'
+                />
+				</Grid>   
+                &nbsp;&nbsp;&nbsp;&nbsp;
+				<Grid item xs={12}>
+                <ReactQuill value={programDescription}
+                    onChange={(event)=>setProgramDescription(event)} 
+					className={clsx(classes.textField)}
+					margin='dense'
+                    />
+				</Grid>   
 
                     {/* <Grid item xs={12} sm={6}> */}
                     <Grid item xs={12}>
@@ -121,7 +115,7 @@ export default function UploadProgram1(props){
 							id="contained-button-file"
 							multiple
 							type="file"
-							onChange={(event)=>setProgramIcon({icon:URL.createObjectURL(event.target.files[0]),file:event.target.files[0]})}
+							onChange={(event)=>setProgramFiles({file:event.target.files[0]})}
 						/>
 						<label htmlFor="contained-button-file">
 							<Button variant="contained" component="span" className={classes.button} fullWidth>
@@ -159,7 +153,7 @@ export default function UploadProgram1(props){
 
 
     return(
-        <Container maxWidth='xs'>
+        <Container maxWidth='sm' spacing={2}>
             <Paper className={classes.paper}>
 				<Typography>
 				Sub-Category Registration

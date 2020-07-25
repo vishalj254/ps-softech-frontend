@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import MaterialTable from 'material-table';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import { BaseUrl, getData, postData ,postDataAndImage} from './FetchServices';
+import { BaseUrl, getData, postData ,postDataAndImage} from '../FetchServices';
 import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button'
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core'
+
 
 const useStyles = makeStyles(theme => ({
  
@@ -29,35 +30,32 @@ const useStyles = makeStyles(theme => ({
 
 export default function TechDisplay() {
   const classes=useStyles();
-
+  // var d=new Date()
   const [stateCol, setStateCol] = React.useState({
     columns: [
-      { title: 'Technology Id', field: 'technologyid' ,editable:'never' },
-      { title: 'programId', field: 'programid' ,editable:'never' },
-      { title: 'Content', field: 'content' },
-      { title: 'Remark', field: 'remark' },
-      { title:'AddedOn', field: 'addedon',type:'date' },
-      { title:'AddedBy', field: 'addedby' },
-      { title:'ProjectType', field: 'projecttype' ,
-      editComponent:props=>(<select onChange={(event)=>setType(event.target.value)}><option>select</option><option value='Major'>Major</option><option value='Minor'>Minor</option></select> )
-      // lookup: { 'Major': 'Major', 'Minor': 'Minor' }
-    },
+      { title: 'Student Id', field: 'placedstudentid' ,editable:'never' },
+      { title: 'Student Name', field: 'name' },
+      { title: 'College', field: 'college' },
+      { title: 'Branch', field: 'branch' },
+      { title: 'Company Name', field: 'companyname' },
+      { title: 'Package', field: 'package' },
+      { title: 'Comment', field: 'comment' },
+      { title: 'Year', field: 'year' },
       { 
-        title: 'File',
-        field: 'filename',
-       
+        title: 'Picture',
+        field: 'photo',
+        render:rowData=> <img src={`${BaseUrl}/images/${rowData.photo}`} style={{width: 30, borderRadius: '50%'}}/>,
         editComponent:props=>(
-        <Grid> 
+        <Grid>
           <input 
-          accept="file/*"
+          accept="image/*"
           className={classes.input}
           id="contained-button-file"
           multiple
-               type="file"
-             onChange={(event)=>setFile(event.target.files[0])}
-             fullWidth
-             />
-         
+          type="file"
+          onChange={(event)=>setFile(event.target.files[0])}
+          fullWidth
+        /> 
          <label htmlFor="contained-button-file">
              <Button variant="contained" component="span" className={classes.button}>
                  Upload
@@ -70,26 +68,30 @@ export default function TechDisplay() {
       const [state,setState]=React.useState({
           data: []});
      const [getFile,setFile]=React.useState('')
-     const [getType,setType]=React.useState('')
-          // const handleAdd=async(newData)=>{
-          //   let formData=new FormData();
+          const handleAdd=async(newData)=>{
+            let formData=new FormData();
          
-          // formData.append('technologyName',newData.technologyname)
-          // formData.append('technologyDescription',newData.technologydescription)
-          //      formData.append('Logo',getFile)
-          //  const config={headers:{'content-type':'multipart/form-data'}}
-          //  const result=await postDataAndImage('technology/addnewRecord',formData,config)
-          //   if(result){
-          //     alert("true")
-          //   }
-          //   else{
-          //     alert("false")
-          //   }
-          //   readAllRecords()
-          // }
+          formData.append('Name',newData.name)
+      	  formData.append('College',newData.college)
+      	  formData.append('Branch',newData.branch)
+          formData.append('Company',newData.companyname)
+          formData.append('Package',newData.package)
+          formData.append('Comment',newData.comment)
+          formData.append('Year',newData.year)
+          formData.append('Photo',getFile)
+      const config={headers:{'content-type':'multipart/form-data'}}
+       var result =await postDataAndImage('placedstudent/addNewRecord',formData,config)
+            if(result){
+              alert("true")
+            }
+            else{
+              alert("false")
+            }
+            readAllRecords()
+          }
   
       const readAllRecords=async() =>{
-       var list=await getData('program/displayall')
+       var list=await getData('placedstudent/displayall')
        setState({data:list})
       }
       useEffect(()=>{
@@ -97,14 +99,17 @@ export default function TechDisplay() {
       },[])
       const handleEdit=async(newData)=>{
       if(getFile==='')
-      {let body={'programId':newData.programid,
-       'content':newData.content,
-      'remark':newData.remark,
-       'projectType':getType,
-
-        
+      {let body={'PlacedStudentId':newData.placedstudentid,
+        'Name':newData.name,
+        'College':newData.college,
+        'Branch':newData.branch,
+        'Company':newData.companyname,
+        'Package':newData.package,
+        'Comment':newData.comment,
+        'Year':newData.year
+      	
         }
-        let result=await postData('program/edit',body)
+        let result=await postData('placedstudent/edit',body)
       
         if(result.RESULT){
         alert("true")
@@ -116,14 +121,15 @@ export default function TechDisplay() {
       }
       else{
         let formData=new FormData();
-        formData.append('programId',newData.programid)  
-        formData.append('fileName',getFile)
+        formData.append('PlacedStudentId',newData.placedstudentid)
+       
+        formData.append('Photo',getFile)
         const config={headers:{'content-type':'multipart/form-data'}}
-        const result=await postDataAndImage('program/editIcon',formData,config)
+        const result=await postDataAndImage('placedstudent/editIcon',formData,config)
         if(result)
         {
-          setFile('')
           alert('record updted')
+          setFile('')
         }
         else{
           alert('record not updated')
@@ -134,9 +140,8 @@ export default function TechDisplay() {
     }
     
       const handleDelete=async(oldData)=>{
-let body={'programId':oldData.programid}
-       let result= await postData('program/delete',body)
-        //var result =await postData('category/delete',oldData)
+let body={'employeeId':oldData.placedstudentid}
+       let result= await postData('placedstudent/deleteRecord',body)
         if(result){
           alert("true")
         }
@@ -149,20 +154,20 @@ let body={'programId':oldData.programid}
       const View=()=>{
   return (
     <MaterialTable
-      title="Program"
+      title="Placed Student"
       columns={stateCol.columns}
       data={state.data}
       editable={{
-        // onRowAdd: newData =>
-        //   new Promise(resolve => {
-        //     setTimeout(() => {
-        //       resolve();
-        //       const data = [...state.data];
-        //       data.push(newData);
-        //       setState({ ...state, data });
-        //       handleAdd(newData)
-        //     }, 600);
-        //   }),
+        onRowAdd: newData =>
+          new Promise(resolve => {
+            setTimeout(() => {
+              resolve();
+              const data = [...state.data];
+              data.push(newData);
+              setState({ ...state, data });
+              handleAdd(newData)
+            }, 600);
+          }),
         onRowUpdate: (newData, oldData) =>
           new Promise(resolve => {
             setTimeout(() => {

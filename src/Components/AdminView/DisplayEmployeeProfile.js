@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import MaterialTable from 'material-table';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import { BaseUrl, getData, postData ,postDataAndImage} from './FetchServices';
+import { BaseUrl, getData, postData ,postDataAndImage} from '../FetchServices';
 import { Grid } from '@material-ui/core';
 import Button from '@material-ui/core/Button'
 import {makeStyles} from '@material-ui/core'

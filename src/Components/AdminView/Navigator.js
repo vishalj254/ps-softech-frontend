@@ -38,6 +38,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
+import HomeMainStyle from '../ExamView/maincategory/HomeMainStyle';
 
 
 const styles = theme => ({
@@ -86,6 +87,10 @@ const styles = theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+
+  },
+  headingColor: {
+    color: '#4fc3f7',
   },
 });
 
@@ -128,13 +133,13 @@ function Navigator(props) {
             </ListItem>
 
 
-        <ExpansionPanel>
+        <ExpansionPanel style={{backgroundColor: '#232f3e'}}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Expansion Panel 1</Typography>
+          <Typography className={clsx(classes.heading && classes.headingColor)} >Old Section</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{display:'flex',flexWrap:'wrap'}}>
 
@@ -295,6 +300,180 @@ function Navigator(props) {
 
               </ExpansionPanelDetails>
             </ExpansionPanel>
+
+
+
+
+
+            <ExpansionPanel style={{backgroundColor: '#232f3e'}}>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={clsx(classes.heading && classes.headingColor)} >Examination</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails style={{display:'flex',flexWrap:'wrap'}}>
+
+            <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<HomeMainStyle/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><CloudUploadIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Category
+                </ListItemText>
+              </ListItem>
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<DisplayTechnology/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><PeopleIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Display Technology
+                </ListItemText>
+              </ListItem>
+
+
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<UploadProgram/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><CloudUploadIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Upload Program
+                </ListItemText>
+              </ListItem>
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<DisplayUploadProgram/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><PeopleIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Display Program
+                </ListItemText>
+              </ListItem>
+
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<MajorMinor/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><CloudUploadIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Major Minor
+                </ListItemText>
+              </ListItem>
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<DisplayMajorMinor/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><PeopleIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Display Major Minor
+                </ListItemText>
+              </ListItem>
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<PlacedStudent/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><CloudUploadIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Add Placed Student
+                </ListItemText>
+              </ListItem>
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<DisplayPlacedStudent/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><PeopleIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Display Placed Student
+                </ListItemText>
+              </ListItem>
+
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<EmployeeProfile/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><CloudUploadIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Employee Profile
+                </ListItemText>
+              </ListItem>
+
+              <ListItem
+                button
+                className={clsx(classes.item && classes.itemActiveItem)}
+                onClick={(event)=>handleClick(<DisplayEmployeeProfile/>)}
+              >
+                <ListItemIcon className={classes.itemIcon}><PeopleIcon/></ListItemIcon>
+                <ListItemText
+                  classes={{
+                    primary: classes.itemPrimary,
+                  }}
+                >
+                  Display Employee Profile
+                </ListItemText>
+              </ListItem>
+
+
+              </ExpansionPanelDetails>
+            </ExpansionPanel>
+
+
 
               <ListItem
                 button

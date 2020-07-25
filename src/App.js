@@ -4,10 +4,12 @@ import React from 'react';
 import AdminRouter from './Components/AdminRouter'
 import Python from './Components/UserView/Theme/modules/views/Node'
 import UserLogin from './Components/UserLogin'
+import DisplayAll from './Components/ExamView/maincategory/DisplayPageWise'
 function App() {
   return (
     <div>
       <AdminRouter/>
+      {/* <DisplayAll/> */}
 
     </div>
   );

@@ -6,7 +6,7 @@ import { Container, Grid, Typography,MenuItem } from '@material-ui/core';
 import clsx from 'clsx'
 import {makeStyles} from '@material-ui/core';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import {postDataAndImage,getData} from './FetchServices'
+import {postDataAndImage,getData} from '../FetchServices'
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import FilledInput from '@material-ui/core/FilledInput';

@@ -24,7 +24,7 @@ import Terms from './Terms'
 import Privacy from './Privacy'
 import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
-import Header from '../../Header'
+import Header from '../../AdminView/Header'
 
 const useStyles = makeStyles(theme => ({
   mainroot:{

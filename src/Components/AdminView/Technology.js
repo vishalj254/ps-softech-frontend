@@ -6,7 +6,7 @@ import { Container, Grid, Typography, Avatar } from '@material-ui/core';
 import clsx from 'clsx'
 import {makeStyles} from '@material-ui/core';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
-import {postDataAndImage} from './FetchServices'
+import {postDataAndImage} from '../FetchServices'
 import { amber, green } from '@material-ui/core/colors';
 import IconButton from '@material-ui/core/IconButton';
 // import Snackbar from '@material-ui/core/Snackbar';

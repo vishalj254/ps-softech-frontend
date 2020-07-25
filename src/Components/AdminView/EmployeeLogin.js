@@ -19,8 +19,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
-import { postData } from "./FetchServices"
-import {ClientURL} from './FetchServices'
+import { postData } from "../FetchServices"
+import {ClientURL} from '../FetchServices'
 import OTPInput from 'otp-input-react'
 
 

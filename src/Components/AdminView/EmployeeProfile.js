@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import Avatar from '@material-ui/core/Avatar';
 import Paper from '@material-ui/core/Paper' ;
-import {postDataAndImage} from './FetchServices';
+import {postDataAndImage} from '../FetchServices';
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
