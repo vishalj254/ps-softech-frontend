@@ -56,7 +56,7 @@ function ProductHeroLayout(props) {
     <section className={classes.root}>
       <Container className={classes.container}>
         <img
-          src="https://material-ui.com/static/themes/onepirate/productHeroWonder.png"
+          src="/images/productHeroWonder.png"
           alt="wonder"
           width="147"
           height="80"

@@ -72,7 +72,7 @@ const styles = theme => ({
   imageTitle: {
     position: 'relative',
     padding: `${theme.spacing(2)}px ${theme.spacing(4)}px 14px`,
-    color:'#D3D3D3'
+    color: '#D3D3D3'
   },
   imageMarked: {
     height: 3,
@@ -88,16 +88,16 @@ const styles = theme => ({
 function ProductCategories(props) {
   const { classes } = props;
 
-  const [images,setImages]=React.useState([])
+  const [images, setImages] = React.useState([])
 
-  const readAllCategory=async()=>{
-    let result=await getData('technology/displayall')
+  const readAllCategory = async () => {
+    let result = await getData('technology/displayall')
     setImages(result)
     console.log(result)
   }
-  React.useEffect(()=>{
+  React.useEffect(() => {
     readAllCategory()
-  },[])
+  }, [])
   // const images = [
   //   {
   //     url:
@@ -154,8 +154,8 @@ function ProductCategories(props) {
   //     width: '40%',
   //   },
   // ];
-  const handleClick=(technologyname,technologyid)=>{
-    props.setViews(technologyname,technologyid)
+  const handleClick = (technologyname, technologyid) => {
+    props.setViews(technologyname, technologyid)
     // alert(technologyname)
   }
 
@@ -172,10 +172,11 @@ function ProductCategories(props) {
             className={classes.imageWrapper}
             style={{
               // width: image.width,
-              width:'33%'
+              width: '33%'
               // width:'40%'
             }}
-            onClick={(event)=>handleClick(image.technologyname,image.technologyid)}
+            // onClick={(event)=>handleClick(image.technologyname,image.technologyid)}
+            onClick={(event) => handleClick('PROGRAM', image.technologyid)}
           >
             <div
               className={classes.imageSrc}

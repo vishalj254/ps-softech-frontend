@@ -1,54 +1,56 @@
 import React from 'react';
 import MaterialTable from 'material-table';
-import {Link} from '@material-ui/core'
+import { Link } from '@material-ui/core'
 import { postData, BaseUrl } from '../../FetchServices';
 import renderHTML from 'react-render-html';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 
 export default function DisplayProgram(props) {
-    const [name,setName]=React.useState(props.technologyname)
+  const [name, setName] = React.useState(props.technologyname)
   const [stateCol, setStateCol] = React.useState({
     columns: [
-    //   { title: 'Technology', field: name },
-      { title: 'Program Name', field: 'programname',render:rowData=>renderHTML(`${rowData.programname}`) },
+      //   { title: 'Technology', field: name },
+      { title: 'Program Name', field: 'programname', render: rowData => renderHTML(`${rowData.programname}`) },
       { title: 'Added On', field: 'addedon' },
-      { title: 'Program description', field: 'programdescription',render:rowData=>renderHTML(`${rowData.programdescription}`) },
+      { title: 'Program description', field: 'programdescription', render: rowData => renderHTML(`${rowData.programdescription}`) },
       {
         title: 'Filenames',
         field: 'filenames',
-        render:rowData=>(<div><Link href={`${BaseUrl}/images/${rowData.filenames}`} download><GetAppRoundedIcon/></Link></div>)
+        render: rowData => (<div><Link href={`${BaseUrl}/images/${rowData.filenames}`} download><GetAppRoundedIcon /></Link></div>)
       },
-      
-    ],
-   
-  });
-  const [state,setState]=React.useState({ data: [
-    // {  programname: 'Baran', addedon: 1987, programdescription: 63,filenames:'abs.zip' }
-  ],})
 
-  const [data,setData]=React.useState([])
-  React.useEffect(()=>{
+    ],
+
+  });
+  const [state, setState] = React.useState({
+    data: [
+      // {  programname: 'Baran', addedon: 1987, programdescription: 63,filenames:'abs.zip' }
+    ],
+  })
+
+  const [data, setData] = React.useState([])
+  React.useEffect(() => {
     readAllPrograms()
-  },[props.technologyid])
-  const readAllPrograms=async()=>{
-    let body={'technologyId':props.technologyid}  
-    let list=await postData('uploadprogram/displayByTechId',body)
+  }, [props.technologyid])
+  const readAllPrograms = async () => {
+    let body = { 'technologyId': props.technologyid }
+    let list = await postData('uploadprogram/displayByTechId', body)
     setData(list)
-    setState({data:list})
+    setState({ data: list })
 
   }
 
-  const [technologyName,setTechnologyName]=React.useState('')
+  const [technologyName, setTechnologyName] = React.useState('')
 
-  const readTechName=async()=>{
-    let body={'technologyId':props.technologyid}  
-    let list=await postData('technology/displayByTechId',body)
+  const readTechName = async () => {
+    let body = { 'technologyId': props.technologyid }
+    let list = await postData('technology/displayByTechId', body)
     setTechnologyName(list)
   }
-  React.useEffect(()=>{
+  React.useEffect(() => {
     readTechName()
-  },[props.technologyid])
+  }, [props.technologyid])
 
   const theme = createMuiTheme({
     palette: {
@@ -62,22 +64,22 @@ export default function DisplayProgram(props) {
 
   });
 
-const handleClick=()=>{
+  const handleClick = () => {
     alert("Hello")
-}
+  }
 
 
-return (
+  return (
     <MuiThemeProvider theme={theme}>
       <MaterialTable
         title={`${technologyName} Programs`}
         columns={stateCol.columns}
         data={state.data}
-        // options={{
-        //   selection: true,
-        //   render: rowData => (<a href={`${BaseUrl}/images/${rowData.filenames}`}>{rowData.filenames}</a>),
-        //   onSelect: {handleClick},
-        // }}
+      // options={{
+      //   selection: true,
+      //   render: rowData => (<a href={`${BaseUrl}/images/${rowData.filenames}`}>{rowData.filenames}</a>),
+      //   onSelect: {handleClick},
+      // }}
       />
     </MuiThemeProvider>
   )
@@ -125,7 +127,7 @@ return (
 //     ],
 //     rows: []
 //   });
-  
+
 //   React.useEffect(()=>{
 //     readAllPrograms()
 //     alert("hello")
@@ -182,7 +184,7 @@ return (
 //             readAllPrograms()
 //             alert("hello")
 //           },[props.technologyid])
-        
+
 //           const readAllPrograms=async()=>{
 //             let body={'technologyId':props.technologyid}  
 //             let list=await postData('uploadprogram/displayByTechId',body)
@@ -278,7 +280,7 @@ return (
 // import renderHTML from 'react-render-html';
 // import GetAppRoundedIcon from '@material-ui/icons/GetAppRounded';
 // import {Link} from '@material-ui/core'
- 
+
 // const DisplayPrograms=(props)=>{
 //   const [data,setData] =React.useState([]) 
 //   const columns = [{
@@ -307,7 +309,7 @@ return (
 //                 readAllPrograms()
 //                 alert("hello")
 //               },[props.technologyid])
-            
+
 //               const readAllPrograms=async()=>{
 //                 let body={'technologyId':props.technologyid}  
 //                 let list=await postData('uploadprogram/displayByTechId',body)
@@ -315,9 +317,9 @@ return (
 //                 console.log(list)
 //                 // alert("hello")
 //               }
-    
+
 //               const [technologyName,setTechnologyName]=React.useState('')
-    
+
 //       const readTechName=async()=>{
 //         let body={'technologyId':props.technologyid}  
 //         let list=await postData('technology/displayByTechId',body)
@@ -326,7 +328,7 @@ return (
 //       React.useEffect(()=>{
 //         readTechName()
 //       },[props.technologyid])
- 
+
 //   return( <ReactTable
 //     data={data}
 //     columns={columns}
@@ -341,7 +343,7 @@ return (
 // import React from 'react'
 // import SearchTable from 'reactable-search';
 // import { postData, BaseUrl } from '../../FetchServices';
- 
+
 // export default function DisplayPrograms(props){
 
 
@@ -350,7 +352,7 @@ return (
 //                     readAllPrograms()
 //                     alert("hello")
 //                   },[props.technologyid])
-                
+
 //                   const readAllPrograms=async()=>{
 //                     let body={'technologyId':props.technologyid}  
 //                     let list=await postData('uploadprogram/displayByTechId',body)
@@ -362,7 +364,7 @@ return (
 // var [data,setData] = React.useState([
 //     // {"technologyid":2,"technologyname":"Python","addedon":"2019-08-03T18:30:00.000Z","addedby":"Sandeep Sappal","technologydescription":"IOT,ML etc","logo":"python.jpg"},{"technologyid":4,"technologyname":"Java Core","addedon":"2019-08-03T18:30:00.000Z","addedby":"Sandeep Sappal","technologydescription":"","logo":"java-programming.jpg"},{"technologyid":5,"technologyname":"React & Node Js","addedon":"2019-08-04T18:30:00.000Z","addedby":"Sandeep Sappal","technologydescription":"MERN Technology","logo":"mern.jpg"},{"technologyid":6,"technologyname":"C++","addedon":"2019-08-04T18:30:00.000Z","addedby":"Sandeep Sappal","technologydescription":"C++","logo":"c++.jpg"},{"technologyid":7,"technologyname":"Android","addedon":"2019-08-05T18:30:00.000Z","addedby":"Sandeep Sappal","technologydescription":"SDK","logo":"android.jpg"},{"technologyid":8,"technologyname":"C Language","addedon":"2019-08-06T18:30:00.000Z","addedby":"Sandeep Sappal","technologydescription":"C","logo":"c-Language.jpg"}
 //   ]);
- 
+
 // return(<div>
 //     <SearchTable
 //     searchPrompt="Type to search"

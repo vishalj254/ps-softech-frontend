@@ -27,9 +27,9 @@ import Hidden from '@material-ui/core/Hidden';
 import Header from '../../AdminView/Header'
 
 const useStyles = makeStyles(theme => ({
-  mainroot:{
+  mainroot: {
     overflow: 'hidden',
-        flexGrow: 1,
+    flexGrow: 1,
   }
 }));
 const drawerWidth = 256;
@@ -38,47 +38,47 @@ function Index() {
 
   const classes = useStyles();
 
-  const setViews=(Views,id)=>{
-    if(Views=='PROGRAM'){
-    setView(<DisplayProgram technologyid={id}/>)
+  const setViews = (Views, id) => {
+    if (Views == 'PROGRAM') {
+      setView(<DisplayProgram technologyid={id} />)
     }
-    else if(Views=='APPBAR'){
-      setView(<div><ProductHero /><ProductValues /><ProductCategories setViews={setViews}/><Placements/><ProductHowItWorks /><ProductCTA /><ProductSmokingHero /></div>)
+    else if (Views == 'APPBAR') {
+      setView(<div><ProductHero /><ProductValues /><ProductCategories setViews={setViews} /><Placements /><ProductHowItWorks /><ProductCTA /><ProductSmokingHero /></div>)
     }
-    else if(Views=='SIGNIN'){
-      setView(<SignIn setViews={setViews}/>)
+    else if (Views == 'SIGNIN') {
+      setView(<SignIn setViews={setViews} />)
     }
-    else if(Views=='SIGNUP'){
-      setView(<SignUp setViews={setViews}/>)
+    else if (Views == 'SIGNUP') {
+      setView(<SignUp setViews={setViews} />)
     }
-    else if(Views=='Java'){
-      setView(<Java/>)
+    else if (Views == 'Java') {
+      setView(<Java />)
     }
-    else if(Views=='Python'){
-      setView(<Python/>)
+    else if (Views == 'Python') {
+      setView(<Python />)
     }
-    else if(Views=='React & Node Js'){
-      setView(<Node/>)
+    else if (Views == 'React & Node Js') {
+      setView(<Node />)
     }
-    else if(Views=='C'){
-      setView(<C/>)
+    else if (Views == 'C') {
+      setView(<C />)
     }
-    else if(Views=='C++'){
-      setView(<Cpp/>)
+    else if (Views == 'C++') {
+      setView(<Cpp />)
     }
-    else if(Views=='Blockchain'){
-      setView(<CRT/>)
+    else if (Views == 'Blockchain') {
+      setView(<CRT />)
     }
-    else if(Views=='TERMS'){
-      setView(<Terms/>)
+    else if (Views == 'TERMS') {
+      setView(<Terms />)
     }
-    else if(Views=='PRIVACY'){
-      setView(<Privacy/>)
+    else if (Views == 'PRIVACY') {
+      setView(<Privacy />)
     }
   }
-  const [view,setView]=React.useState(<div><ProductHero /><ProductValues /><ProductCategories setViews={setViews}/><Placements/><ProductCTA /><ProductSmokingHero /></div>)
+  const [view, setView] = React.useState(<div><ProductHero /><ProductValues /><ProductCategories setViews={setViews} /><Placements /><ProductCTA /><ProductSmokingHero /></div>)
   // <Testimonials/>
-  const [state,setState] = React.useState({
+  const [state, setState] = React.useState({
     mobileOpen: false,
   });
   const handleDrawerToggle = () => {
@@ -86,8 +86,8 @@ function Index() {
   };
   return (<div className={classes.mainroot}>
     <React.Fragment>
-      <AppAppBar setViews={setViews}/>
-    {/*<nav className={classes.drawer}>
+      <AppAppBar setViews={setViews} />
+      {/*<nav className={classes.drawer}>
       <Hidden smUp implementation="js">
         <AppAppBar
           // PaperProps={{ style: { width: drawerWidth } }}
@@ -104,9 +104,9 @@ function Index() {
     </nav>
     <Header onDrawerToggle={handleDrawerToggle} /> */}
       {view}
-      <AppFooter setViews={setViews}/>
+      <AppFooter setViews={setViews} />
     </React.Fragment>
-    </div>
+  </div>
   );
 }
 

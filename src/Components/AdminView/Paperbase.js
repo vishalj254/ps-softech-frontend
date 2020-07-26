@@ -228,7 +228,7 @@ function Paperbase (props) {
           <nav className={classes.drawer}>
             <Hidden smUp implementation="js">
               <Navigator
-                // PaperProps={{ style: { width: drawerWidth } }}
+                PaperProps={{ style: { width: drawerWidth } }}
                 variant="temporary"
                 open={state.mobileOpen}
                 onClose={handleDrawerToggle}

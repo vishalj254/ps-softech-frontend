@@ -202,7 +202,7 @@ return(<Container maxWidth='xl'>
       <YearPicker
         id="outlined-dense"
         label="Year"
-        className={clsx(classes.textField, classes.dense)}
+        // className={clsx(classes.textField, classes.dense)}
         margin="dense"
         variant="outlined"
         onChange={handleChange} 
